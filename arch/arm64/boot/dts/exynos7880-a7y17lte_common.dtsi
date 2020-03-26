@@ -110,9 +110,9 @@
               fsmgr_flags = "wait,check";
 	      status = "ok";
             }; 
-              system {
-              compatible = "android,system";
-              dev = "/dev/block/platform/13540000.dwmmc0/by-name/SYSTEM";
+              vendor {
+              compatible = "android,vendor";
+              dev = "/dev/block/platform/13540000.dwmmc0/by-name/CACHE";
               type = "ext4";
               mnt_flags = "ro";
               fsmgr_flags = "wait";
