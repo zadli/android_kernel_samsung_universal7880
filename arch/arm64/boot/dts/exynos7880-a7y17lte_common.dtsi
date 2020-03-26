@@ -98,8 +98,9 @@
               compatible = "android,system";
               dev = "/dev/block/platform/13540000.dwmmc0/by-name/SYSTEM";
               type = "ext4";
-              mnt_flags = "ro,noload";
+              mnt_flags = "ro";
               fsmgr_flags = "wait";
+	      status = "ok";
             };
               efs {
               compatible = "android,efs";
@@ -107,8 +108,17 @@
               type = "ext4";
               mnt_flags = "noatime,nosuid,nodev,noauto_da_alloc,discard,journal_async_commit,data=ordered,errors=panic";
               fsmgr_flags = "wait,check";
+	      status = "ok";
             }; 
-          };
+              system {
+              compatible = "android,system";
+              dev = "/dev/block/platform/13540000.dwmmc0/by-name/SYSTEM";
+              type = "ext4";
+              mnt_flags = "ro";
+              fsmgr_flags = "wait";
+	      status = "ok";
+            };
+	  };
         };
       };
 
